@@ -5,6 +5,15 @@
 	<title>Guestbook</title>
 </head>
 <body>
+	<form action="" method="POST">
+		name: <input type="text" name="name" placeholder="Your nickname">
+		<br>
+		message:
+		<br>
+		<textarea name="content"></textarea>
+		<input type="submit" value="Submit">
+	</form>
+	<hr>
 	<table border="1">
 		<tbody>
 <?php foreach ($articles as $article) { ?>
