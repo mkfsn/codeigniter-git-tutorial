@@ -16,7 +16,7 @@ class Article_control extends CI_Controller {
 		else
 			$result = $this->article_model->article_get($id);
 
-		print_r($result);
+		$this->load->view('article_view/list', array('articles' => $result));
 	}
 
 };
