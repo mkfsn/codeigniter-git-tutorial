@@ -15,7 +15,7 @@ class User_control extends CI_Controller {
 
 	public function login()
 	{
-		if (isset($this->username)) {
+		if ($this->username) {
 			redirect('/article');
 		}
 
@@ -39,6 +39,12 @@ class User_control extends CI_Controller {
 				$this->load->view('user_view/login.php');
 			}
 		}
+	}
+
+	public function logout()
+	{
+		$this->session->unset_userdata('username');
+		redirect('/login');
 	}
 
 };
