@@ -2,16 +2,23 @@
 
 class Article_control extends CI_Controller {
 
+	private $username;
+
 	public function __construct()
 	{
 		parent::__construct();	
 
 		$this->load->model('article_model');
+		$this->load->library('session');
+		$this->load->helper('url');
+		$this->username = $this->session->userdata('username');
+
+		if (!$this->username)
+			redirect('/login');
 	}
 
 	public function get($id = -1)
 	{
-
 		$name = $this->input->post('name');
 		$content = $this->input->post('content');
 
