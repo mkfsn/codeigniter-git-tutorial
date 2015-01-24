@@ -43,6 +43,9 @@ $route['default_controller'] = "welcome";
 $route['article'] = "article_control/get";
 $route['article/(:num)'] = "article_control/get/$1";
 
+$route['login'] = "user_control/login";
+$route['logout'] = "user_control/logout";
+
 $route['404_override'] = '';
 
 
