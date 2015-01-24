@@ -39,6 +39,10 @@
 */
 
 $route['default_controller'] = "welcome";
+
+$route['article'] = "article_control/get";
+$route['article/(:num)'] = "article_control/get/$1";
+
 $route['404_override'] = '';
 
 
