@@ -10,9 +10,9 @@ class User_model extends CI_Model {
 	public function check_user_password($name='', $password='')
 	{
 		$valid_name = "mkfsn";
-		$valid_password = "d067125a62d552a0d47f5ccec089ab72";
+		$valid_password = "a777049f6bd702902df09ce5d83d79c5";
 
-		return ($name == $valid_name) && ($this->hash($password) == $valid_password());
+		return ($name == $valid_name) && ($this->hash($password) == $valid_password);
 	}
 
 	private function hash($plain='')
